@@ -12,7 +12,17 @@ package q3
 //
 //Se M ou N forem iguais ou menores que 0, a função deve retornar um erro.
 
+import "fmt"
+
 func DominoPieces(m, n int) (int, error) {
-	// Seu código aqui
+	if m <= 0 || n <= 0 {
+		return 0, fmt.Errorf("Erro: Dimensões do tabuleiro não podem ser iguais à zero")
+	}
+	quadrados := m * n
+	if quadrados%2 == 0 {
+		return quadrados / 2, nil
+	} else {
+		return (quadrados - 1) / 2, nil
+	}
 	return 0, nil
 }
