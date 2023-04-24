@@ -10,7 +10,7 @@ import "sort"
 
 
 func CalculateTowers(barLengths []int) (int, int) {
-	maior_maior_torre := 0
+	maior_maior_torre := 1
 	maior_torre := 1
 	num_torres := len(barLengths)
 	sort.Ints(barLengths)
